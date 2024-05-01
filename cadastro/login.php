@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // retorna o metod usado para acessa
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="../img/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/logo_1.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/stars.css">
   <title>Login | Games Space </title>
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // retorna o metod usado para acessa
 <body>
   <div class="container">
       <div class="logo">
-        <a href="../paginicial.html">
+        <a href="../index.html">
           <img src="../img/logo_1.png" width="150px" alt="Logo">
         </a>
       </div>

@@ -13,6 +13,7 @@ if(!isset($_SESSION['admin_logado'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/logo_1.png">
     <title>Painel do Administrador</title>
     <link rel="stylesheet" href="./css/stars.css">
     <link rel="stylesheet" href="./css/painel_admin.css">
@@ -22,7 +23,7 @@ if(!isset($_SESSION['admin_logado'])){
 <body>
     <div class="container">
         <div class="logo">
-            <img src="../img/logo_1.png" alt="Logo">
+            <a href="../index.html"><img src="../img/logo_1.png" alt="Logo"></a>
         </div>
     </div>
 

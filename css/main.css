@@ -14,7 +14,7 @@
     --color-black-heavy: #ffffff;
     --color-text: #4f4f4f;
     --color-text-out: #90908e;
-    --color-primary: #ffbf00;
+    --color-primary: #fa6744;
     --color-secondary: #fff2cc;
     --color-white: #ffffff;
     --color-red: #e74c3c;
@@ -84,8 +84,8 @@ a.navbar-brand {
 }
 
 .banner {
-    padding-top: 110px;
-    padding-bottom: 200px;
+    padding-top: 60px;
+    padding-bottom: 100px;
 }
 
 .text-banner {
@@ -120,7 +120,7 @@ a.navbar-brand {
 
 .btn-icon-left span.icon-left {
     display: inline-block;
-    color: var(--color-white);
+    color: #000000;
     background-color: var(--color-primary);
     width: 45px;
     height: 45px;
@@ -133,6 +133,7 @@ a.navbar-brand {
 }
 
 .btn-sm {
+    background-color: #002b4b;
     padding: 9px 15px !important;
     border-radius: 15px !important;
     font-size: 18px !important;
@@ -229,7 +230,6 @@ a.navbar-brand {
     left: 0;
     right: 0;
     height: 500px;
-    background-image: url(../img/bg-icons-2.png);
 }
 
 .cardapio {
@@ -314,7 +314,7 @@ a.navbar-brand {
     font-size: 16px;
     padding: 4px 10px;
     border-radius: 10px;
-    color: var(--color-white);
+    color: #002b4b;
     background-color: var(--color-black-heavy);
     margin-left: 15px;
 }
@@ -715,7 +715,7 @@ select.form-control {
     width: 25px;
     height: 25px;
     position: absolute;
-    background-color: var(--color-secondary);
+    background-color: #002b4b;
     border-radius: 50px;
     right: -5px;
     top: -5px;

@@ -1,53 +1,53 @@
 var MENU = {
     "burgers": [
         {
+            "id": "Console-Playstation-5-Sony-SSD-825GB",
+            "img": "./img/cardapio/playstation/ps5.jpeg",
+            "name": "Playstation 5 825GB",
+            "dsc": "Console Playstation 5 Sony, SSD 825GB, Controle sem fio DualSense, Com Mídia Física, Branco - 1214A",
+            "price": 3999.99
+        },
+        {
             "id": "Console-PlayStation-4-500GB-Sony",
-            "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg",
+            "img": "./img/cardapio/playstation/ps4.png",
             "name": "PlayStation 4 500GB",
-            "dsc": "The Gramercy Tavern Burger - 4 Pack",
-            "price": 99
+            "dsc": "Console Sony Playstation 4 Standard, 500GB, Preto",
+            "price": 2564.99
         },
         {
-            "id": "shake-shack-shackburger-8-pack",
-            "img": "./img/cardapio/burguers/shake-shack-shackburger-8-pack.973a5e26836ea86d7e86a327becea2b0.jpg",
-            "name": "Shake Shack",
-            "dsc": "Shake Shack ShackBurger® - 8 Pack",
-            "price": 49
+            "id": "Console-PlayStation-3-Slim-160GB-Sony",
+            "img": "./img/cardapio/playstation/ps3.png",
+            "name": "PlayStation 3 Slim",
+            "dsc": "Console PlayStation 3 Slim 160GB - Sony, Preto",
+            "price": 879.90
         },
         {
-            "id": "gotts-cheeseburger-kit-for-4",
-            "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg",
-            "name": "Gott's Roadside",
-            "dsc": "Gott's Complete Cheeseburger Kit for 4",
-            "price": 99
+            "id": "Console-PlayStation-2-Preto-Sony-(Japonês)",
+            "img": "./img/cardapio/playstation/ps2.png",
+            "name": "PlayStation 2",
+            "dsc": "Console PlayStation 2 Preto - Sony (Japonês)",
+            "price": 339.99
         },
         {
-            "id": "le-big-matt-kit-for-6",
-            "img": "./img/cardapio/burguers/le-big-matt-kit-for-6.1ddae6e382bb3218eeb0fd5247de115a.jpg",
-            "name": "Emmy Squared",
-            "dsc": "Le Big Matt Burger Kit for 6",
-            "price": 99
+            "id": "Console-PlayStation-1-FAT-Sony",
+            "img": "./img/cardapio/playstation/ps1.png",
+            "name": "PlayStation 1 FAT",
+            "dsc": "Console PlayStation 1 FAT - Sony",
+            "price": 599.99
         },
         {
-            "id": "shake-shack-shackburger-16-pack",
-            "img": "./img/cardapio/burguers/shake-shack-shackburger-16-pack.316f8b09144db65931ea29e34869287a.jpg",
-            "name": "Shake Shack",
-            "dsc": "Shake Shack Shackburger® - 16 Pack",
-            "price": 89
+            "id": "Console-PlayStation-Vita-Sony",
+            "img": "./img/cardapio/playstation/vita.png",
+            "name": "PlayStation Vita",
+            "dsc": "Console PlayStation Vita - Sony",
+            "price": 1059.99
         },
         {
-            "id": "21-usda-prime-burgers-pack-of-18-8oz-each",
-            "img": "./img/cardapio/burguers/usda-prime-burgers-pack-of-18-8oz-each.274c67f15aa1c0b210dbf51801706670.jpg",
-            "name": "Peter Luger Steak House",
-            "dsc": "USDA Prime Burgers - Pack of 18 (8oz each)",
-            "price": 175.95
-        },
-        {
-            "id": "double-stack-burger-kit-for-4",
-            "img": "./img/cardapio/burguers/handf-double-stack-burger-kit-for-4.4ee9f54b1d6087e9996335f07c13e5cd.jpg",
-            "name": "Holeman & Finch",
-            "dsc": "Double Stack Burger Kit for 4",
-            "price": 79
+            "id": "Console-PSP-PlayStation-Portátil-2001-Prata-Sony", 
+            "img": "./img/cardapio/playstation/psp.png",
+            "name": "PlayStation Portátil",
+            "dsc": "Console PSP PlayStation Portátil 2001 Prata - Sony",
+            "price": 799.99
         },
         {
             "id": "goldbelly-burger-bash-pack",

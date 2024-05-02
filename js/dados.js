@@ -116,7 +116,7 @@ var MENU = {
             "price": 249
         },
         {
-            "id": "whole-texas-smoked-brisket",
+            "id": "whole-texas-smoked-briske",
             "img": "./img/cardapio/churrasco/whole-texas-smoked-brisket.a5558a25381e271408e197936e7985d8.jpg",
             "name": "Terry Black's Barbecue",
             "dsc": "Whole Texas Smoked Brisket",

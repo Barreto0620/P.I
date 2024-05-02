@@ -3,9 +3,16 @@ var MENU = {
         {
             "id": "Console-Playstation-5-Sony-SSD-825GB",
             "img": "./img/cardapio/playstation/ps5.jpeg",
-            "name": "Playstation 5 825GB",
+            "name": "Playstation 5  Digital",
             "dsc": "Console Playstation 5 Sony, SSD 825GB, Controle sem fio DualSense, Com Mídia Física, Branco - 1214A",
             "price": 3999.99
+        },
+        {
+            "id": "Console-PlayStation-5-Slim-825GB-com-Disco",
+            "img": "./img/cardapio/playstation/ps5_disco.png",
+            "name": "PlayStation 5  Disco",
+            "dsc": "Console PlayStation 5 Slim com Disco - PS5 (LACRADO)",
+            "price": 3849.99
         },
         {
             "id": "Console-PlayStation-4-500GB-Sony",
@@ -13,6 +20,13 @@ var MENU = {
             "name": "PlayStation 4 500GB",
             "dsc": "Console Sony Playstation 4 Standard, 500GB, Preto",
             "price": 2564.99
+        },
+        {
+            "id": "Console-PlayStation-4-Slim-1TB-Sony",
+            "img": "./img/cardapio/playstation/ps4_slim.png",
+            "name": "PlayStation 4 Slim",
+            "dsc": "Console PlayStation 4 Slim 1TB - Sony, Preto",
+            "price": 1759.99
         },
         {
             "id": "Console-PlayStation-3-Slim-160GB-Sony",
@@ -49,20 +63,7 @@ var MENU = {
             "dsc": "Console PSP PlayStation Portátil 2001 Prata - Sony",
             "price": 799.99
         },
-        {
-            "id": "goldbelly-burger-bash-pack",
-            "img": "./img/cardapio/burguers/the-burger-bash-package.bd9d12d031865940bbe5faf15f1a62f8.jpg",
-            "name": "Pat LaFrieda Meats",
-            "dsc": "Goldbelly \"Burger Bash\" Pack",
-            "price": 109
-        },
-        {
-            "id": "burger-au-poivre-kit-4-pack",
-            "img": "./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg",
-            "name": "Raoul's",
-            "dsc": "Burger Au Poivre Kit - 4 Pack",
-            "price": 99
-        },
+        
         {
             "id": "goldbelly-burger-blend-4-lbs",
             "img": "./img/cardapio/burguers/goldbelly-burger-blend-1-lb.13a21b66edf7173a59c75c3a6d2f981b.jpg",

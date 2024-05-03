@@ -36,7 +36,7 @@ var MENU = {
             "price": 879.90
         },
         {
-            "id": "Console-PlayStation-2-Preto-Sony-(Japonês)",
+            "id": "Console-PlayStation-2-Preto-Sony",
             "img": "./img/cardapio/playstation/ps2.png",
             "name": "PlayStation 2",
             "dsc": "Console PlayStation 2 Preto - Sony (Japonês)",

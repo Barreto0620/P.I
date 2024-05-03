@@ -18,7 +18,7 @@ if (!isset($_SESSION['admin_logado'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
 	<link rel="stylesheet" href="../cadastro/css/cadastrar_admin.css">
 	<link rel="stylesheet" href="../cadastro/css/stars.css">
 	<title>Login | Games Space </title>
@@ -26,7 +26,7 @@ if (!isset($_SESSION['admin_logado'])) {
 
 <body>
 	<header>
-		<a href="#"><img class="logo" src="img/logo_1.png" alt="Foto da loja de Games"></a>
+		<a href="painel_admin.php"><img class="logo" src="./img/logo_1.png" alt="Foto da loja de Games"></a>
 	</header>
 	<div id="stars"></div>
 	<div id="stars2"></div>
@@ -34,7 +34,7 @@ if (!isset($_SESSION['admin_logado'])) {
 	<div class="container right-panel-active">
 		<!-- Sign Up -->
 		<div class="container__form container--signup">
-			<form action="" class="form" id="form1" method="post" enctype="multipart/form-data">
+			<form action="#" class="form" id="form1" method="post" enctype="multipart/form-data">
 				<h2 class="form__title">Cadastro de Administrador</h2>
 
 				<label for="nome"></label>
@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // retorna o metod usado para acessa
 		$stmt->bindParam(':ativo', $ativo, PDO::PARAM_INT);
 		$stmt->execute();
 
-		echo "<p style='color:green;'> Administrador cadastrado com sucesso! </p>";
+		echo "<p style='text-align: center;color:green;margin-top: 1%;'> Administrador cadastrado com sucesso! </p>";
 	} catch (PDOException $e) {
 		echo "<p style='color=red;'> Erro ao cadastrar Usuário!" . $e->getMessage() . "</p>";
 	}

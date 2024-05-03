@@ -243,6 +243,7 @@ body {
     margin-bottom: -15px;
 }
 
-.p{
-    text-align: end; 
+.p .aviso{
+  color: #fff;
+  text-align: center;
 }

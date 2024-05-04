@@ -24,14 +24,17 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
 	<link rel="stylesheet" href="./css/stars.css">
-    <link rel="stylesheet" href="./css/listar_admin.css">
+    <link rel="stylesheet" href="css/lista_admin.css">
     <title>Administradores Cadastrados</title>
 </head>
 
-<body>
+<body><header>
+    <div id="stars"></div>
+    <a href="painel_admin.php" class="xis">👈</a>
     <h1>Lista de Administradores</h1>
-    <a href="painel_admin.php">👈 Voltar para o Painel do Administrador</a>
+    </header>
     <table>
+        
         <thead>
             <tr>
                 <th>ID</th>

@@ -57,7 +57,7 @@ if (!isset($_SESSION['admin_logado'])) {
 		<div class="container__overlay">
 			<div class="overlay">
 				<div class="overlay__panel overlay--left">
-					<a href="#"><button class="btn" id="signIn">Voltar</button></a>
+					<a href="painel_admin.php"><button class="btn" id="signIn">Voltar</button></a>
 				</div>
 			</div>
 		</div>

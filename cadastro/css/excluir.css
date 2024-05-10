@@ -49,5 +49,11 @@ p{
     text-transform: uppercase;
     transition: transform 80ms ease-in;
     margin-top: 10%;
-    margin-left: 22%;
+    margin-left: 25%;
+    transition: 0.5s;
+  }
+
+  .btn:hover{
+    background-color: #fa6744;
+    transition: 0.5s;
   }

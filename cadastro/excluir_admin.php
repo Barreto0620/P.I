@@ -50,7 +50,7 @@
             <p><?php echo $mensagem ?> </p>
         </div>
         <div>
-            <button type="submit" class="btn">Cadastrar</button>
+            <button class="btn" id="signIn" onclick="window.location.href = 'listar_admin.php';">Voltar</button>
         </div>
     </div>
 </body>

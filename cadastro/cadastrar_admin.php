@@ -25,12 +25,14 @@ if (!isset($_SESSION['admin_logado'])) {
 </head>
 
 <body>
+		<div class="block">
+		</div>
+		<div id="stars"></div>
+		<div id="stars2"></div>
+		<div id="stars3"></div>
 	<header>
 		<a href="painel_admin.php"><img class="logo" src="./img/logo_1.png" alt="Foto da loja de Games"></a>
 	</header>
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
 	<div class="container right-panel-active">
 		<!-- Sign Up -->
 		<div class="container__form container--signup">
@@ -62,31 +64,30 @@ if (!isset($_SESSION['admin_logado'])) {
 			</div>
 		</div>
 	</div>
-<?php 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') { // retorna o metod usado para acessar a página.
+	<?php
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') { // retorna o metod usado para acessar a página.
 
-	$nome = $_POST['nome'];
-	$email = $_POST['email'];
-	$senha = $_POST['senha'];
-	$ativo = isset($_POST['ativo']) ? 1 : 0;
+		$nome = $_POST['nome'];
+		$email = $_POST['email'];
+		$senha = $_POST['senha'];
+		$ativo = isset($_POST['ativo']) ? 1 : 0;
 
-	try {
-		$sql = "INSERT INTO ADMINISTRADOR (ADM_NOME, ADM_EMAIL, ADM_SENHA, ADM_ATIVO)  VALUES (:nome, :email, :senha, :ativo)";
+		try {
+			$sql = "INSERT INTO ADMINISTRADOR (ADM_NOME, ADM_EMAIL, ADM_SENHA, ADM_ATIVO)  VALUES (:nome, :email, :senha, :ativo)";
 
-		$stmt = $pdo->prepare($sql); //Nessa linha, $stmt é um objeto que representa a instrução SQL preparada. Você pode então vincular parâmetros a essa instrução e executá-la.
-		$stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
-		$stmt->bindParam(':email', $email, PDO::PARAM_STR);
-		$stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
-		$stmt->bindParam(':ativo', $ativo, PDO::PARAM_INT);
-		$stmt->execute();
+			$stmt = $pdo->prepare($sql); //Nessa linha, $stmt é um objeto que representa a instrução SQL preparada. Você pode então vincular parâmetros a essa instrução e executá-la.
+			$stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
+			$stmt->bindParam(':email', $email, PDO::PARAM_STR);
+			$stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
+			$stmt->bindParam(':ativo', $ativo, PDO::PARAM_INT);
+			$stmt->execute();
 
-		echo "<p style='text-align: center;color:green;margin-top: 1%;'> Administrador cadastrado com sucesso! </p>";
-	} catch (PDOException $e) {
-		echo "<p style='color=red;'> Erro ao cadastrar Usuário!" . $e->getMessage() . "</p>";
+			echo "<p style='text-align: center;color:green;margin-top: 1%;'> Administrador cadastrado com sucesso! </p>";
+		} catch (PDOException $e) {
+			echo "<p style='color=red;'> Erro ao cadastrar Usuário!" . $e->getMessage() . "</p>";
+		}
 	}
-}
-?>
+	?>
 </body>
 
 </html>
-

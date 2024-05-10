@@ -42,6 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // retorna o metod usado para acessa
 </head>
 
 <body>
+  <div class="block">
+    <p></p>
+    <p></p>
+  </div>
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
   <div class="container">
       <div class="logo">
         <a href="../index.html">
@@ -49,10 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // retorna o metod usado para acessa
         </a>
       </div>
   </div>
-
-  <div id="stars"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
   <div class="section">
     <div class="container">
       <div class="row full-height justify-content-center">

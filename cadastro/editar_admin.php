@@ -69,11 +69,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <header>
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
         <a href="painel_admin.php"><img class="logo" src="./img/logo_1.png" alt="Foto da loja de Games"></a>
     </header>
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
     <div class="container right-panel-active">
         <!-- Sign Up -->
         <div class="container__form container--signup">

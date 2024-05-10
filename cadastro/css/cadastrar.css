@@ -4,6 +4,13 @@
 	margin-left: 5%;
   width: 10%;
   height: 10%;
+  position: relative;
+}
+
+
+.block .p{
+  display: flex;
+  margin: 0%;
 }
 
 :root {

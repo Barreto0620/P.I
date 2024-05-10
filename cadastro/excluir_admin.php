@@ -34,11 +34,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
+    <link rel="stylesheet" href="css/excluir.css">
+    <link rel="stylesheet" href="css/stars.css">
     <title>Deletar Produto </title>
 </head>
 <body>
-    <h2> Deletar</h2>
-    <p><?php echo $mensagem ?> </p>
-    <a href="listar_admin.php"> Voltar à listagem de Administradores </a>
+    <div id="stars"></div>
+
+    <div class="logo_div">
+        <a href="painel_admin.php"><img src="../img/logo_1.png" class="logo" alt="Logo"></a>
+    </div>
+    <div class="card">
+        <div class="title">
+            <p><?php echo $mensagem ?> </p>
+        </div>
+        <div>
+            <button type="submit" class="btn">Cadastrar</button>
+        </div>
+    </div>
 </body>
 </html>

@@ -55,10 +55,10 @@ try {
                 <td><?php echo $administrador['ADM_SENHA']; ?></td>
                 <td><?php echo $administrador['ADM_ATIVO']; ?></td>
                 <td><a href="editar_admin.php?id=<?php echo $administrador['ADM_ID']; ?>"class="action-btn">✍</a></td>
-                <td><a href="excluir_admin.php?id=<?php echo $administrador['ADM_ID']; ?>" class="action-btn delete-btn">❌</a></td>
+                <td><a href="excluir_admin.php?id=<?php echo $administrador['ADM_ID']; ?>" class="action-btn delete-btn" onclick="return confirmarClique()">❌</a></td>
             </tr>
         <?php endforeach; ?>
     </table>
 </body>
-
+<script src="js/listar_admin.js"></script>
 </html>

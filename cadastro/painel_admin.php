@@ -52,7 +52,7 @@ if (!isset($_SESSION['admin_logado'])) {
             </button>
             <button class='card card3' tabindex="-1">
                 <h2>
-                    <a href="cadastrar_produto.php">Cadastrar Produto</a>
+                    <a href="teste.php">Cadastrar Produto</a>
                 </h2>
             </button>
             <button class='card card4' tabindex="-1">

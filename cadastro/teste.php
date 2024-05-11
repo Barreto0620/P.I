@@ -93,6 +93,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){   //$_SERVER['REQUEST_METHOD'] retorna
 	<title>Cadastro de Produtos</title>
 </head>
 <body>
+<div class="block">
+		</div>
+		<div id="stars"></div>
+		<div id="stars2"></div>
+		<div id="stars3"></div>
+	<header>
+		<a href="painel_admin.php"><img class="logo" src="./img/logo_1.png" alt="Foto da loja de Games"></a>
+	</header>
 
 	<script>
 		//irá adicionar um novo campo de imagem URL

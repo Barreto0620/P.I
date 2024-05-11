@@ -4,11 +4,19 @@ html {
   height: 100%;
 }
 
+.logo {
+	margin-left: 5%;
+  width: 10%;
+  height: 10%;
+  position: relative;
+}
+
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  background-image: linear-gradient(to right, #002b4b 0%, #b34a2f 100%);
   overflow: hidden;
 }
 

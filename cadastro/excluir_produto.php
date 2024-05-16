@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])){
         $stmt->execute();
 
         if($stmt->rowCount() > 0){
-            $message = "<p style='color:green;'>Produto excluído com sucesso!</p>";
+            $message = "<p style='color:white;'>Produto excluído com sucesso!</p>";
         }else{
             $message = "Erro ao excluir o produto!";
     }
@@ -34,16 +34,31 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])){
 }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excluir Produto</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
+    <link rel="stylesheet" href="css/excluir.css">
+    <link rel="stylesheet" href="css/stars_3.css">
+    <title>Deletar Produto </title>
 </head>
 <body>
-    <h2>Excluir Produtos</h2>
-    <p><?php echo $message; ?></p>
-    <a href="listar_produtos.php">Voltar à Lista de Produtos</a>
+    <div id="stars"></div>
+
+    <div class="logo_div">
+        <a href="painel_admin.php"><img src="../img/logo_1.png" class="logo" alt="Logo"></a>
+    </div>
+    <div class="card">
+        <div class="title">
+            <p><?php echo $message ?> </p>
+        </div>
+        <div>
+            <button class="btn" id="signIn" onclick="window.location.href = 'listar_produtos.php';">Voltar</button>
+        </div>
+    </div>
 </body>
+<script src="js/excluir_produto.js"></script>
 </html>

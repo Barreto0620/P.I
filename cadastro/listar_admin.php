@@ -23,14 +23,14 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
-	<link rel="stylesheet" href="./css/stars_2.css">
-    <link rel="stylesheet" href="css/lista_admin.css">
+	<link rel="stylesheet" href="./css/stars_3.css">
+    <link rel="stylesheet" href="css/lista_admin_.css">
     <title>Administradores Cadastrados</title>
 </head>
 
 <body><header>
     <div id="stars"></div>
-    <a href="painel_admin.php" class="xis"><img src="./img/voltar.png" width="50px" height="50px" alt="Voltar"></a>
+    <a href="painel_admin.php"><img src="./img/voltar.png" class="xis" alt="Voltar"></a>
     <h1>Lista de Administradores</h1>
     </header>
     <table>
@@ -60,5 +60,5 @@ try {
         <?php endforeach; ?>
     </table>
 </body>
-<script src="js/listar_admin.js"></script>
+<script src="js/excluir_admin.js"></script>
 </html>

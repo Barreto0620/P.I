@@ -25,56 +25,18 @@ try {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/lista_produto.css">
+	<link rel="stylesheet" href="./css/stars_3.css">
 	<title>Lista de Produtos</title>
-
-	<style>
-
-		body {
-			font-family: 'arial',sans-serif;
-		}
-
-		table {
-			width: 100%;
-			border-collapse: collapse;
-			margin-top: 20px;
-		}
-
-		th,td {
-			padding: 10px;
-			border-bottom: 1px solid #ddd;
-			text-align: left;
-		}
-
-		th {
-			background-color: #4CAF50;
-			color: #fff;
-		}
-
-		tr :hover {
-			background-color:#f1f1f1;
-		}
-
-		.action-btn {
-			padding: 5px 10px;
-			border: none;
-			text-decoration: none;
-			display: inline-block;
-            border-radius: 5px;
-		}
-
-		.action-btn:hover {
-			background-color: #45a049;
-		}
-
-		.delete-btn:hover {
-			background-color: #da190b;
-		}
-	</style>
 
 </head>
 <body>
-    <a href="painel_admin.php">👈 Voltar para o Painel do Administrador</a>
-	<h1>Lista de Produtos</h1>
+<header>
+    <div id="stars"></div>
+    <a href="painel_admin.php"><img src="./img/voltar.png" class="xis" alt="Voltar"></a>
+    <h1>Lista de Produtos</h1>
+    </header>
+
 	<table>
 		<thead> <!-- irá deixar o HTML de forma semantica  -->
 			<tr>
@@ -104,10 +66,12 @@ try {
 			<td><img src="<?php echo $produto['IMAGEM_URL']; ?>" 
 			alt="Imagem do Produto" width="50"></td>
 			<td><a href="editar_produto.php?id=<?php echo $produto['PRODUTO_ID'];?>" class="action-btn">✍</a></td>  <!-- irá buscar o link via GET para que busque essa pasta e apareça a mensagem  -->	
-			<td><a href="excluir_produto.php?id=<?php echo $produto['PRODUTO_ID']; ?>" class="action-btn delete-btn">❌</a></td>
+			<td><a href="excluir_produto.php?id=<?php echo $produto['PRODUTO_ID']; ?>" class="action-btn delete-btn" onclick="return confirmarClique()">❌</a></td>
 		</tr>
 		<?php endforeach;?>
 	</table>
 	
 </body>
+<script src="js/excluir_produto.js"></script>
+
 </html>

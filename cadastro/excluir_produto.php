@@ -43,7 +43,12 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])){
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
     <link rel="stylesheet" href="css/excluir.css">
     <link rel="stylesheet" href="css/stars_3.css">
+    
     <title>Deletar Produto </title>
+    <style>         
+        body {background-image: linear-gradient(to right, #002b4b 0%, #b34a2f 100%);
+            } 
+    </style>
 </head>
 <body>
     <div id="stars"></div>

@@ -16,7 +16,7 @@ if (!isset($_SESSION['admin_logado'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/logo_1.png">
     <title>Painel do Administrador</title>
-    <link rel="stylesheet" href="./css/stars_2.css">
+    <link rel="stylesheet" href="./css/stars_3.css">
     <link rel="stylesheet" href="./css/painel_admin.css">
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <link rel="stylesheet" href="./css/carossel_painel.css" />

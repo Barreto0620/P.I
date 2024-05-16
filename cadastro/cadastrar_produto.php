@@ -159,8 +159,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){   //$_SERVER['REQUEST_METHOD'] retorna
 		<label for="quantidade">Quantidade: </label>
 		<input type="number" name="quantidade[]" id="quantidade" step="1.00"> 
 		<p>
-
-		<button type="button" onclick="adicionarImagem()"> Adicionar mais Imagens	</button>
+		<button type="button" onclick="adicionarImagem()"> Adicionar mais Imagens</button>
 		<button type="submit"> Cadastrar Produto</button>
 <p></p>
 

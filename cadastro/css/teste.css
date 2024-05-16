@@ -25,7 +25,7 @@ body {
   top: 50%;
   left: 50%;
   width: 400px;
-  padding: 40px;
+  padding: 25px;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,.5);
   box-sizing: border-box;
@@ -44,7 +44,7 @@ body {
   position: relative;
 }
 
-input {
+input{
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -182,4 +182,23 @@ select {
 .button-container {
   display: flex;
   justify-content: space-between; /* Alinhar os botões na mesma linha com espaço entre eles */
+}
+
+.ativo{
+  margin-top: -5%;
+  display: flex;
+  font-size: 1.0rem;
+  text-align: center;
+}
+
+#ativo{
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+h4{
+  color: #726f6f;
+  font-size: 20px;
+  margin-left: 26%;
+  margin-right: -40%;
 }

@@ -30,7 +30,7 @@ try {
 
 <body><header>
     <div id="stars"></div>
-    <a href="painel_admin.php" class="xis">👈</a>
+    <a href="painel_admin.php" class="xis"><img src="./img/voltar.png" width="50px" height="50px" alt="Voltar"></a>
     <h1>Lista de Administradores</h1>
     </header>
     <table>

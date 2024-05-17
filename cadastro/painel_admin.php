@@ -17,7 +17,7 @@ if (!isset($_SESSION['admin_logado'])) {
     <link rel="icon" type="image/png" sizes="32x32" href="../img/logo_1.png">
     <title>Painel do Administrador</title>
     <link rel="stylesheet" href="./css/stars_3.css">
-    <link rel="stylesheet" href="./css/painel_admin.css">
+    <link rel="stylesheet" href="./css/painel_admin1.css">
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <link rel="stylesheet" href="./css/carossel_painel.css" />
 </head>

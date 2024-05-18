@@ -25,7 +25,7 @@ try {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/teste.css">
+	<link rel="stylesheet" href="css/teste_.css">
 	<link rel="stylesheet" href="./css/stars_3.css">
 	<title>Cadastro de Produtos</title>
 </head>
@@ -129,8 +129,14 @@ try {
 				</div>
 
 				<button type="button" onclick="adicionarImagem()"> Adicionar mais Imagens</button>
+
+			<div class="ativo_span">	
 				<label for="ativo"></label>
+				<span>Ativo:</span>
 				<input type="checkbox" name="ativo" id="ativo" value="1" checked>
+        	</div>
+
+				
 
 				<input type="button" name="previous" class="previous action-button" value="Anterior" />
 				<button type="submit" class="action-button">Cadastrar</button>

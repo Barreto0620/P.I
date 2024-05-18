@@ -19,7 +19,7 @@ if (!isset($_SESSION['admin_logado'])) {
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 	<link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
-	<link rel="stylesheet" href="../cadastro/css/cadastrar_admin.css">
+	<link rel="stylesheet" href="../cadastro/css/cadastrar_admin_.css">
 	<link rel="stylesheet" href="../cadastro/css/stars_3.css">
 	<title>Login | Games Space </title>
 </head>

@@ -339,8 +339,9 @@
   justify-content: center;
 }
 
-body {
-    background-color: #1f2029 !important;
+html {
+    
+    background-color: #1B2735 !important;
 }
 
 .ativo_span{

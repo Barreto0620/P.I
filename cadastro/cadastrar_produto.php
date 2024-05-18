@@ -123,6 +123,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){   //$_SERVER['REQUEST_METHOD'] retorna
 
 
 	<form action="" method="post" enctype="multipart/form-data">
+		
 		<label for="nome">Nome: </label>
 		<input type="text" name="nome" id="nome" required> 
 		<p>

@@ -6,6 +6,9 @@
   height: 10%;
 }
 
+header{
+  margin-top: 40%;
+}
 
 .block .p{
   display: flex;

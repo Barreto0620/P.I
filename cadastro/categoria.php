@@ -6,46 +6,6 @@ if (!isset($_SESSION['admin_logado'])) {
     header('Location:login.php');
     exit();
 }
-
-// bloco de consultas para buscar categorias. a variavem $categorias criada será utilizada no form para mostrar as categorias disponiveis.
-
-try {
-    $stmt_categoria = $pdo->prepare("SELECT * FROM CATEGORIA");
-    $stmt_categoria->execute();
-    $categorias = $stmt_categoria->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    echo "<p style='color=red;'> Erro ao buscar categorias" . $e->getMessage() . "</p>";
-}
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {   //$_SERVER['REQUEST_METHOD'] retorna o metodo usado para acessar a pagina
-
-    //criar um formulario com os nomes dessas variaveis
-    $nome = $_POST['nome'];
-    $descricao = $_POST['descricao'];
-    $ativo = isset($_POST['ativo']) ? 1 : 0;
-
-    try {
-        $sql = "INSERT INTO CATEGORIA 
-			(CATEGORIA_NOME, CATEGORIA_DESC, CATEGORIA_ID, CATEGORIA_ATIVO) 
-			VALUES (:nome, :descricao, :categoria_id, :ativo)";
-
-        $stmt = $pdo->prepare($sql);
-
-        $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
-        $stmt->bindParam(':descricao', $descricao, PDO::PARAM_STR);
-        $stmt->bindParam(':categoria_id', $categoria_id, PDO::PARAM_STR);
-        $stmt->bindParam(':ativo', $ativo, PDO::PARAM_STR);
-        $stmt->execute();
-
-        //pegando o id do ultimo produto inserido
-        $categoria_id = $pdo->lastInsertID();
-    } catch (PDOException $e) {
-        echo "<p style='color:red;'> Erro ao cadastrar o produto: " . $e->getMessage() . "</p>";
-    }
-
-    echo "<p style='color:green;'> Categoria cadastrada com sucesso!</p>";
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -99,6 +59,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {   //$_SERVER['REQUEST_METHOD'] retor
 
     </form>
 </div>
+
+<?php
+try {
+    $stmt_categoria = $pdo->prepare("SELECT * FROM CATEGORIA");
+    $stmt_categoria->execute();
+    $categorias = $stmt_categoria->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo "<p style='color=red;'> Erro ao buscar categorias" . $e->getMessage() . "</p>";
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {   //$_SERVER['REQUEST_METHOD'] retorna o metodo usado para acessar a pagina
+
+    //criar um formulario com os nomes dessas variaveis
+    $nome = $_POST['nome'];
+    $descricao = $_POST['descricao'];
+    $ativo = isset($_POST['ativo']) ? 1 : 0;
+
+    try {
+        $sql = "INSERT INTO CATEGORIA 
+			(CATEGORIA_NOME, CATEGORIA_DESC, CATEGORIA_ID, CATEGORIA_ATIVO) 
+			VALUES (:nome, :descricao, :categoria_id, :ativo)";
+
+        $stmt = $pdo->prepare($sql);
+
+        $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
+        $stmt->bindParam(':descricao', $descricao, PDO::PARAM_STR);
+        $stmt->bindParam(':categoria_id', $categoria_id, PDO::PARAM_STR);
+        $stmt->bindParam(':ativo', $ativo, PDO::PARAM_STR);
+        $stmt->execute();
+
+        //pegando o id do ultimo produto inserido
+        $categoria_id = $pdo->lastInsertID();
+    } catch (PDOException $e) {
+        echo "<p style='color:red;'> Erro ao cadastrar o produto: " . $e->getMessage() . "</p>";
+    }
+
+    echo "<p style='text-align: center;font-size: 20px;color:green;margin-top: 1%;'> Categoria cadastrada com sucesso!</p>";
+}
+
+?>
+
 
 </body>
 

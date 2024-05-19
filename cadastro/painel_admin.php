@@ -19,7 +19,7 @@ if (!isset($_SESSION['admin_logado'])) {
     <link rel="stylesheet" href="css/painel_admin1.css">
     <link rel="stylesheet" href="css/stars_.css"/>
     <link rel="stylesheet" href="./css/carossel_painel.css" />
-    <title>Painel do Administrador</title>
+    <title>Painel do Administrador | Games Space</title>
 </head>
 
 <body>

@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
     <link rel="stylesheet" href="../cadastro/css/editar_admin.css">
     <link rel="stylesheet" href="css/stars_.css">
-    <title>Login | Games Space </title>
+    <title>Editar Administrador | Games Space </title>
 </head>
 
 <body>

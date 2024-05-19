@@ -37,7 +37,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
     <link rel="stylesheet" href="css/excluir.css">
     <link rel="stylesheet" href="css/stars_.css">
-    <title>Deletar Produto </title>
+    <title>Usuário Deletado ! | Games Space</title>
 </head>
 <body>
     <div id="stars"></div>

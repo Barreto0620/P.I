@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])){
     <link rel="stylesheet" href="css/excluir.css">
     <link rel="stylesheet" href="css/stars_.css">
     
-    <title>Deletar Produto </title>
+    <title>Produto Deletado ! | Games Space </title>
     <style>         
         body {background-image: linear-gradient(to right, #002b4b 0%, #b34a2f 100%);
             } 

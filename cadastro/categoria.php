@@ -14,9 +14,10 @@ if (!isset($_SESSION['admin_logado'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Categoria</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
     <link rel="stylesheet" href="./css/cadastrar_categoria_.css">
     <link rel="stylesheet" href="css/stars_.css">
+    <title>Cadastro de Categoria | Games Space</title>
 </head>
 
 <body>

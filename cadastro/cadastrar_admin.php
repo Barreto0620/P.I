@@ -21,7 +21,7 @@ if (!isset($_SESSION['admin_logado'])) {
 	<link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
 	<link rel="stylesheet" href="../cadastro/css/cadastrar_admin_.css">
 	<link rel="stylesheet" href="css/stars_.css">
-	<title>Login | Games Space </title>
+	<title>Cadastro de Administrador | Games Space</title>
 </head>
 
 <body>

@@ -16,7 +16,7 @@ if (!isset($_SESSION['admin_logado'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Categoria</title>
     <link rel="stylesheet" href="./css/cadastrar_categoria_.css">
-    <link rel="stylesheet" href="./css/stars_3.css">
+    <link rel="stylesheet" href="css/stars_.css">
 </head>
 
 <body>

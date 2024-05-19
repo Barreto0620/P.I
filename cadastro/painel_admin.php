@@ -15,11 +15,11 @@ if (!isset($_SESSION['admin_logado'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/logo_1.png">
-    <title>Painel do Administrador</title>
-    <link rel="stylesheet" href="./css/stars_3.css">
-    <link rel="stylesheet" href="./css/painel_admin1.css">
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="css/painel_admin1.css">
+    <link rel="stylesheet" href="css/stars_.css"/>
     <link rel="stylesheet" href="./css/carossel_painel.css" />
+    <title>Painel do Administrador</title>
 </head>
 
 <body>
@@ -52,12 +52,12 @@ if (!isset($_SESSION['admin_logado'])) {
             </button>
             <button class='card card3' tabindex="-1">
                 <h2>
-                    <a href="teste.php">Cadastrar Produto</a>
+                    <a href="cadastrar_produto.php">Cadastrar Produto</a>
                 </h2>
             </button>
             <button class='card card4' tabindex="-1">
                 <h2>
-                    <a href="listar_produtos.php">Lista de Produtos </a>
+                    <a href="listar_produtos.php">Lista de Produtos</a>
                 </h2>
             </button>
             <button class='card card5' tabindex="-1">

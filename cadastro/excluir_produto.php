@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
     <link rel="stylesheet" href="css/excluir.css">
-    <link rel="stylesheet" href="css/stars_3.css">
+    <link rel="stylesheet" href="css/stars_.css">
     
     <title>Deletar Produto </title>
     <style>         

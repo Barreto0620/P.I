@@ -86,6 +86,7 @@ try {
 
 				<label for="nome"></label>
 				<input type="text" name="nome" id="nome" placeholder="Nome" required>
+
 				<label for="descricao"></label>
 				<input type="text" name="descricao" id="descricao" placeholder="Descrição" required>
 
@@ -123,6 +124,7 @@ try {
 			<fieldset>
 				<h2 class="fs-title">Defina a Imagem</h2>
 				<h3 class="fs-subtitle">Por favor, escolha as imagens</h3>
+
 				<label for="imagem"></label>
 				<div id="containerImagens">
 					<input type="text" name="imagem_url[]" placeholder="Adicionar Imagem">
@@ -142,6 +144,7 @@ try {
 				<input type="button" name="previous" class="previous action-button" value="Anterior" />
 				<button type="submit" class="action-button">Cadastrar</button>
 			</fieldset>
+			
 			<?php
 
 			if ($_SERVER['REQUEST_METHOD'] == 'POST') {   //$_SERVER['REQUEST_METHOD'] retorna o metodo usado para acessar a pagina

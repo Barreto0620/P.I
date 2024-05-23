@@ -66,7 +66,7 @@ try {
 			<td><?php echo $produto['PRODUTO_QTD']; ?></td>
 			<td><img src="<?php echo $produto['IMAGEM_URL']; ?>" 
 			alt="Imagem do Produto" width="50"></td>
-			<td><a href="editar_produto.php?id=<?php echo $produto['PRODUTO_ID'];?>" class="action-btn">✍</a></td>  <!-- irá buscar o link via GET para que busque essa pasta e apareça a mensagem  -->	
+			<td><a href="teste.php?id=<?php echo $produto['PRODUTO_ID'];?>" class="action-btn">✍</a></td>  <!-- irá buscar o link via GET para que busque essa pasta e apareça a mensagem  -->	
 			<td><a href="excluir_produto.php?id=<?php echo $produto['PRODUTO_ID']; ?>" class="action-btn delete-btn" onclick="return confirmarClique()">❌</a></td>
 		</tr>
 		<?php endforeach;?>

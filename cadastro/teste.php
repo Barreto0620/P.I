@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
-    <link rel="stylesheet" href="css/cadastrar_produto.css">
+    <link rel="stylesheet" href="css/teste.css">
     <link rel="stylesheet" href="css/stars_.css">
     <title>Editar Produto | Games Space</title>
 </head>
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     <div id="stars2"></div>
     <div id="stars3"></div>
     <header>
-        <a href="painel_admin.php"><img class="logo" src="./img/logo_1.png" alt="Foto da loja de Games"></a>
+        <a href="listar_produtos.php"><img class="logo" src="./img/logo_1.png" alt="Foto da loja de Games"></a>
     </header>
     <!-- Essa linha cria um campo de entrada (input) oculto no formulário. Um campo de entrada oculto é usado quando você quer incluir um dado no formulário que não precisa ser visível ou editável pelo usuário, mas que precisa ser enviado junto com os outros dados quando o formulário é submetido. -->
 
@@ -140,27 +140,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 <h2 class="fs-title">Defina a Imagem</h2>
                 <h3 class="fs-subtitle">Por favor, escolha as imagens</h3>
 
-
                 <div id="containerImagens"></div>
+                <div class="imagem-section">
 
-                <?php
-                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                    $id = $_POST['id'];
-                }
 
-                $stmt = $pdo->prepare("SELECT * FROM PRODUTO_IMAGEM WHERE PRODUTO_ID = :id");
-                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-                $stmt->execute();
-                $imagem_url = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                foreach ($imagem_url as $imagem) {
-                    // $valorPadrao = isset($_GET['valor']) ? $_GET['valor'] : "Valor Padrão";
-                    echo "<input type='hidden' name='imagem_id[]' value='{$imagem['IMAGEM_ID']}'>";
-                    echo '<input type="text" name="imagem_url[]" placeholder="Adicionar Imagem" value="' . $imagem['IMAGEM_URL'] . '">';
-                    echo '<input type="text" name="imagem_ordem[]" placeholder="Ordem Imagem" value="' . $imagem['IMAGEM_ORDEM'] . '">';
-                }
+                    <?php
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        $id = $_POST['id'];
+                    }
 
-                ?>
+                    $stmt = $pdo->prepare("SELECT * FROM PRODUTO_IMAGEM WHERE PRODUTO_ID = :id");
+                    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                    $stmt->execute();
+                    $imagem_url = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    foreach ($imagem_url as $imagem) {
+                        // $valorPadrao = isset($_GET['valor']) ? $_GET['valor'] : "Valor Padrão";
+                        echo "<input type='hidden' name='imagem_id[]' value='{$imagem['IMAGEM_ID']}'>";
+                        echo '<input type="text" name="imagem_url[]" placeholder="Adicionar Imagem" value="' . $imagem['IMAGEM_URL'] . '">';
+                        echo '<input type="text" name="imagem_ordem[]" placeholder="Ordem Imagem" value="' . $imagem['IMAGEM_ORDEM'] . '">';
+                    }
+
+                    ?>
+                </div>
                 <div class="ativo_span">
                     <label for="ativo"></label>
                     <span>Ativo:</span>
@@ -174,59 +177,59 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 <button type="submit" class="action-button">Editar</button>
             </fieldset>
 
-                <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id = $_POST['id'];
-    $nome = $_POST['nome'];
-    $descricao = $_POST['descricao'];
-    $preco = $_POST['preco'];
-    $desconto = $_POST['desconto'];
-    $categoria_id = $_POST['categoria_id'];
-    $produto_qtd = $_POST['qtd'];
-    $ativo = isset($_POST['ativo']) ? 1 : 0;
-    $imagem_url = $_POST['imagem_url'];
-    $imagem_ordem = $_POST['imagem_ordem'];
+            <?php
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $id = $_POST['id'];
+                $nome = $_POST['nome'];
+                $descricao = $_POST['descricao'];
+                $preco = $_POST['preco'];
+                $desconto = $_POST['desconto'];
+                $categoria_id = $_POST['categoria_id'];
+                $produto_qtd = $_POST['qtd'];
+                $ativo = isset($_POST['ativo']) ? 1 : 0;
+                $imagem_url = $_POST['imagem_url'];
+                $imagem_ordem = $_POST['imagem_ordem'];
 
-    try {
-        if (isset($_POST['imagem_url']) && isset($_POST['imagem_ordem'])) {
-            foreach ($_POST['imagem_url'] as $index => $url) {
-                if (!empty($url) && isset($_POST['imagem_ordem'][$index])) {
-                    $ordem = $_POST['imagem_ordem'][$index];
-                    $imagem_id = $_POST['imagem_id'][$index];
+                try {
+                    if (isset($_POST['imagem_url']) && isset($_POST['imagem_ordem'])) {
+                        foreach ($_POST['imagem_url'] as $index => $url) {
+                            if (!empty($url) && isset($_POST['imagem_ordem'][$index])) {
+                                $ordem = $_POST['imagem_ordem'][$index];
+                                $imagem_id = $_POST['imagem_id'][$index];
 
-                    $stmt_imagem = $pdo->prepare("UPDATE PRODUTO_IMAGEM SET IMAGEM_ORDEM = :imagem_ordem, IMAGEM_URL = :imagem_url WHERE PRODUTO_ID = :id AND IMAGEM_ID = :imagem_id");
-                    $stmt_imagem->bindParam(':imagem_url', $url, PDO::PARAM_STR);
-                    $stmt_imagem->bindParam(':imagem_ordem', $ordem, PDO::PARAM_INT);
-                    $stmt_imagem->bindParam(':id', $id, PDO::PARAM_INT);
-                    $stmt_imagem->bindParam(':imagem_id', $imagem_id, PDO::PARAM_INT);
-                    $stmt_imagem->execute();
+                                $stmt_imagem = $pdo->prepare("UPDATE PRODUTO_IMAGEM SET IMAGEM_ORDEM = :imagem_ordem, IMAGEM_URL = :imagem_url WHERE PRODUTO_ID = :id AND IMAGEM_ID = :imagem_id");
+                                $stmt_imagem->bindParam(':imagem_url', $url, PDO::PARAM_STR);
+                                $stmt_imagem->bindParam(':imagem_ordem', $ordem, PDO::PARAM_INT);
+                                $stmt_imagem->bindParam(':id', $id, PDO::PARAM_INT);
+                                $stmt_imagem->bindParam(':imagem_id', $imagem_id, PDO::PARAM_INT);
+                                $stmt_imagem->execute();
+                            }
+                        }
+                    }
+
+                    $stmtProdutoEstoque = $pdo->prepare("UPDATE PRODUTO_ESTOQUE SET PRODUTO_QTD = :qtd WHERE PRODUTO_ID = :id");
+                    $stmtProdutoEstoque->bindParam(':qtd', $produto_qtd, PDO::PARAM_STR);
+                    $stmtProdutoEstoque->bindParam(':id', $id, PDO::PARAM_INT);
+                    $stmtProdutoEstoque->execute();
+
+                    $stmt = $pdo->prepare("UPDATE PRODUTO SET PRODUTO_NOME = :nome, PRODUTO_DESC = :descricao, PRODUTO_PRECO = :preco, PRODUTO_DESCONTO = :desconto, CATEGORIA_ID = :categoria_id,  PRODUTO_ATIVO = :ativo WHERE PRODUTO_ID = :id");
+                    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                    $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
+                    $stmt->bindParam(':descricao', $descricao, PDO::PARAM_STR);
+                    $stmt->bindParam(':preco', $preco, PDO::PARAM_STR);
+                    $stmt->bindParam(':desconto', $desconto, PDO::PARAM_STR);
+                    $stmt->bindParam(':categoria_id', $categoria_id, PDO::PARAM_INT);
+                    $stmt->bindParam(':ativo', $ativo, PDO::PARAM_INT);
+                    $stmt->execute();
+
+                    header('Location: editar_produto.php?id=' . $id . '&success=1');
+                    exit();
+                } catch (PDOException $e) {
+                    echo "Erro: " . $e->getMessage();
                 }
             }
-        }
 
-        $stmtProdutoEstoque = $pdo->prepare("UPDATE PRODUTO_ESTOQUE SET PRODUTO_QTD = :qtd WHERE PRODUTO_ID = :id");
-        $stmtProdutoEstoque->bindParam(':qtd', $produto_qtd, PDO::PARAM_STR);
-        $stmtProdutoEstoque->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmtProdutoEstoque->execute();
-
-        $stmt = $pdo->prepare("UPDATE PRODUTO SET PRODUTO_NOME = :nome, PRODUTO_DESC = :descricao, PRODUTO_PRECO = :preco, PRODUTO_DESCONTO = :desconto, CATEGORIA_ID = :categoria_id,  PRODUTO_ATIVO = :ativo WHERE PRODUTO_ID = :id");
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
-        $stmt->bindParam(':descricao', $descricao, PDO::PARAM_STR);
-        $stmt->bindParam(':preco', $preco, PDO::PARAM_STR);
-        $stmt->bindParam(':desconto', $desconto, PDO::PARAM_STR);
-        $stmt->bindParam(':categoria_id', $categoria_id, PDO::PARAM_INT);
-        $stmt->bindParam(':ativo', $ativo, PDO::PARAM_INT);
-        $stmt->execute();
-        
-        header('Location: editar_produto.php?id=' . $id . '&success=1');
-        exit();
-    } catch (PDOException $e) {
-        echo "Erro: " . $e->getMessage();
-    }
-}
-
-       ?> 
+            ?>
 
 
         </form>

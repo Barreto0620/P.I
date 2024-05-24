@@ -5,12 +5,11 @@ html {
 }
 
 .logo {
-	margin-left: 5%;
+  margin-left: 5%;
   width: 10%;
   height: 10%;
   position: relative;
 }
-
 
 body {
   margin: 0;
@@ -31,6 +30,7 @@ body {
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
+  overflow: hidden; /* Remove a rolagem geral */
 }
 
 .register-box h2 {
@@ -44,7 +44,7 @@ body {
   position: relative;
 }
 
-input{
+input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -181,27 +181,37 @@ select {
 
 .button-container {
   display: flex;
-  justify-content: space-between; /* Alinhar os botões na mesma linha com espaço entre eles */
+  justify-content: space-between;
+  position: sticky;
+  bottom: 0;
+  padding: 10px;
 }
 
-.ativo{
+.ativo {
   margin-top: -5%;
   display: flex;
   font-size: 1.0rem;
   text-align: center;
 }
 
-#ativo{
+#ativo {
   margin-left: -160px;
   margin-top: 30px;
 }
 
-.ativo_span{
+.ativo_span {
   margin-left: 30px;
   display: flex;
 }
 
-span{
+span {
   color: #726f6f;
   margin: auto 60px;
+}
+
+/* Nova seção de imagens com rolagem */
+.imagem-section {
+  max-height: 200px; /* Ajuste a altura conforme necessário */
+  overflow-y: auto;
+  margin-bottom: 20px;
 }

@@ -28,7 +28,7 @@ if (!isset($_SESSION['admin_logado'])) {
     <div id="stars3"></div>
     <div class="container">
         <div class="logo">
-            <a href="../index.html"><img src="../img/logo_1.png" alt="Logo"></a>
+            <a href="#"><img src="../img/logo_1.png" alt="Logo"></a>
         </div>
     </div>
 

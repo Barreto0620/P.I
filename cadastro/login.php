@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // retorna o metod usado para acessa
   <div id="stars3"></div>
   <div class="container">
       <div class="logo">
-        <a href="../index.html">
+        <a href="#">
           <img src="../img/logo_1.png" width="150px" alt="Logo">
         </a>
       </div>

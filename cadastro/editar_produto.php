@@ -1,4 +1,3 @@
-
 <?php
 //uma sessão é iniciada e verifica-se se um administrador está logado. Se não estiver, ele é redirecionado para a página de login.
 session_start();
@@ -109,85 +108,138 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-<!-- Um formulário de edição é apresentado ao administrador, preenchido com os detalhes atuais do produto, permitindo que ele faça modificações e submeta o formulário para atualizar os detalhes do produto -->
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>Editar Produto</title>
-    <link rel="stylesheet" href="listar_produtos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
+    <link rel="stylesheet" href="css/editar_produto.css">
+    <link rel="stylesheet" href="css/stars_.css">
+    <title>Editar Produto | Games Space</title>
 </head>
-<body>
-<h2>Editar Produto</h2>
 
-    
+<body>
+    <div class="block">
+    </div>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <header>
+        <a href="listar_produtos.php"><img class="logo" src="./img/logo_1.png" alt="Foto da loja de Games"></a>
+    </header>
     <!-- Essa linha cria um campo de entrada (input) oculto no formulário. Um campo de entrada oculto é usado quando você quer incluir um dado no formulário que não precisa ser visível ou editável pelo usuário, mas que precisa ser enviado junto com os outros dados quando o formulário é submetido. -->
 
-        <form action="editar_produto.php" method="post">
+    <div class="register-box">
+        <form action="editar_produto.php" method="post" id="msform" class="form">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">Descrição</li>
+                <li>Valor</li>
+                <li>Imagem</li>
+            </ul>
+            <!-- fieldsets -->
+
             <input type="hidden" name="id" value="<?php echo $produto['PRODUTO_ID']; ?>">
 
-            <label for="nome">Nome do produto:</label>
-            <input type="text" name="nome" id="nome" value="<?php echo $produto['PRODUTO_NOME']; ?>">
-            <p></p>
+            <fieldset>
 
-            <label for="descricao">Descrição:</label>
-            <textarea name="descricao" id="descricao"><?php echo $produto['PRODUTO_DESC']; ?></textarea>
-            <p></p>
+                <h2 class="fs-title">Editar Produto</h2>
+                <h3 class="fs-subtitle">Editando a descrição do produto</h3>
 
-            <label for="preco">Preço:</label>
-            <input type="number" name="preco" id="preco" value="<?php echo $produto['PRODUTO_PRECO']; ?>">
-            <p></p>
 
-            <label for="desconto">Desconto:</label>
-            <input type="number" name="desconto" id="desconto" value="<?php echo $produto['PRODUTO_DESCONTO']; ?>">
-            <p></p>
+                <label for="nome"></label>
+                <input type="text" name="nome" id="nome" placeholder="Nome" value="<?php echo $produto['PRODUTO_NOME']; ?>">
 
-            <label for="categoria_nome">Categoria:</label>
-            <select name="categoria_id" id="categoria_id" required>
-            <?php foreach($categorias as $categoria): ?>
-            <option value="<?= $categoria['CATEGORIA_ID']?>">
-                <?= $categoria['CATEGORIA_NOME'] ?>
-            </option>
-            <?php endforeach; ?>
-        </select>
-        <p></p>
 
-        <label for="qtd">Estoque:</label>
-        <input type="number" name="qtd" id="qtd" value="<?php echo $produto['PRODUTO_QTD']; ?>">
-        <p></p>
+                <label for="descricao"></label>
+                <input type="text" name="descricao" id="descricao" placeholder="Descrição" value="<?php echo $produto['PRODUTO_DESC']; ?>">
 
-        <label for="descricao">Produto ativo:</label>
-        <input type="checkbox" name="ativo" id="ativo" value="1" checked>
-        <p></p>
+                <label for="categoria_nome"></label>
+                <select name="categoria_id" id="categoria_id" required>
+                    <?php foreach ($categorias as $categoria) : ?>
+                        <option value="<?= $categoria['CATEGORIA_ID'] ?>">
+                            <?= $categoria['CATEGORIA_NOME'] ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
 
-        <div id="containerImagens">
-        </div>
-        <?php 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $id = $_POST['id'];
-            }
+                <input type="button" name="next" class="next action-button" value="Proximo" />
 
-        $stmt = $pdo->prepare("SELECT * FROM PRODUTO_IMAGEM WHERE PRODUTO_ID = :id");
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->execute();
-        $imagem_url = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            </fieldset>
 
-        foreach($imagem_url as $imagem){
-            // $valorPadrao = isset($_GET['valor']) ? $_GET['valor'] : "Valor Padrão";
-            echo "<input type='hidden' name='imagem_id[]' value='{$imagem['IMAGEM_ID']}'>";
-            echo '<input type="text" name="imagem_url[]" value="' . $imagem['IMAGEM_URL'] . '">'; 
-            echo '<input type="text" name="imagem_ordem[]" value="' . $imagem['IMAGEM_ORDEM'] . '">'; 
-            echo "<p></p>";  
-        }
-    
-        ?>
-        
-        <input type="submit" value="Atualizar Produto">
-        </form>    
 
-<a href="listar_produtos.php">Voltar à Lista de Produtos</a>
-<div>
-</div>
+            <fieldset class="button-container">
+
+                <h2 class="fs-title">Definir o Valor</h2>
+
+                <h3 class="fs-subtitle">Por favor, defina o valor</h3>
+
+
+                <label for="preco"></label>
+                <input type="number" name="preco" id="preco" step="0.01" placeholder="Preço" value="<?php echo $produto['PRODUTO_PRECO']; ?>">
+
+
+                <label for="qtd"></label>
+                <input type="number" name="qtd" id="qtd" step="1.00" placeholder="Estoque" value="<?php echo $produto['PRODUTO_QTD']; ?>">
+
+                <label for="desconto"></label>
+                <input type="number" name="desconto" id="desconto" step="0.01" placeholder="Desconto" value="<?php echo $produto['PRODUTO_DESCONTO']; ?>">
+
+                <input type="button" name="previous" class="previous action-button" value="Anterior" />
+                <input type="button" name="next" class="next action-button" value="Proximo" />
+
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Defina a Imagem</h2>
+                <h3 class="fs-subtitle">Por favor, escolha as imagens</h3>
+
+                <div id="containerImagens"></div>
+                <div class="imagem-section">
+
+
+
+                    <?php
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        $id = $_POST['id'];
+                    }
+
+                    $stmt = $pdo->prepare("SELECT * FROM PRODUTO_IMAGEM WHERE PRODUTO_ID = :id");
+                    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                    $stmt->execute();
+                    $imagem_url = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    foreach ($imagem_url as $imagem) {
+                        // $valorPadrao = isset($_GET['valor']) ? $_GET['valor'] : "Valor Padrão";
+                        echo "<input type='hidden' name='imagem_id[]' value='{$imagem['IMAGEM_ID']}'>";
+                        echo '<input type="text" name="imagem_url[]" placeholder="Adicionar" value="' . $imagem['IMAGEM_URL'] . '">';
+                        echo '<input type="text" name="imagem_ordem[]" placeholder="Ordem" value="' . $imagem['IMAGEM_ORDEM'] . '">';
+                    }
+
+                    ?>
+                </div>
+                <div class="ativo_span">
+                    <label for="ativo"></label>
+                    <span>Ativo:</span>
+                    <input type="checkbox" name="ativo" id="ativo" value="1" checked>
+                </div>
+
+
+
+                <input type="button" name="previous" class="previous action-button" value="Anterior" />
+
+                <button type="submit" class="action-button">Editar</button>
+            </fieldset>
+
+        </form>
+    </div>
+
+    <div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="./js/teste_1.js"></script>
 </body>
-</html>
 
+</html>

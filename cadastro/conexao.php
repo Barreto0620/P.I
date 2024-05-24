@@ -1,9 +1,9 @@
 <?php
 
-$host = 'localhost';
+$host = '144.22.157.228';
 $db = 'Delta';
-$user = 'root';
-$pass = '';
+$user = 'delta';
+$pass = 'delta';
 $charset = 'utf8mb4';
 
 // DSN (Data Source Name)

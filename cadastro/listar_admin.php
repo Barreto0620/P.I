@@ -8,7 +8,7 @@ if (!isset($_SESSION['admin_logado'])) {
 }
 
 try {
-    $stmt = $pdo->prepare("SELECT * FROM administrador");
+    $stmt = $pdo->prepare("SELECT * FROM ADMINISTRADOR");
     $stmt->execute();
     $administrador = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
@@ -47,15 +47,15 @@ try {
             </tr>
         </thead>
 
-        <?php foreach ($administrador as $administrador) : ?>
+        <?php foreach ($administrador as $administradores) : ?>
             <tr>
-                <td><?php echo $administrador['ADM_ID']; ?></td>
-                <td><?php echo $administrador['ADM_NOME']; ?></td>
-                <td><?php echo $administrador['ADM_EMAIL']; ?></td>
-                <td><?php echo $administrador['ADM_SENHA']; ?></td>
-                <td><?php echo $administrador['ADM_ATIVO']; ?></td>
-                <td><a href="editar_admin.php?id=<?php echo $administrador['ADM_ID']; ?>"class="action-btn">✍</a></td>
-                <td><a href="excluir_admin.php?id=<?php echo $administrador['ADM_ID']; ?>" class="action-btn delete-btn" onclick="return confirmarClique()">❌</a></td>
+                <td><?php echo $administradores['ADM_ID']; ?></td>
+                <td><?php echo $administradores['ADM_NOME']; ?></td>
+                <td><?php echo $administradores['ADM_EMAIL']; ?></td>
+                <td><?php echo $administradores['ADM_SENHA']; ?></td>
+                <td><?php echo $administradores['ADM_ATIVO']; ?></td>
+                <td><a href="editar_admin.php?id=<?php echo $administradores['ADM_ID']; ?>"class="action-btn">✍</a></td>
+                <td><a href="excluir_admin.php?id=<?php echo $administradores['ADM_ID']; ?>" class="action-btn delete-btn" onclick="return confirmarClique()">❌</a></td>
             </tr>
         <?php endforeach; ?>
     </table>

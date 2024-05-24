@@ -5,12 +5,11 @@ html {
 }
 
 .logo {
-	margin-left: 5%;
+  margin-left: 5%;
   width: 10%;
   height: 10%;
   position: relative;
 }
-
 
 body {
   margin: 0;
@@ -27,9 +26,9 @@ body {
   width: 400px;
   padding: 25px;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, .5);
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
   border-radius: 10px;
 }
 
@@ -44,7 +43,7 @@ body {
   position: relative;
 }
 
-input{
+input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -98,7 +97,7 @@ label {
   font-size: 14px;
 }
 
-#msform .action-button:hover, 
+#msform .action-button:hover,
 #msform .action-button:focus {
   box-shadow: 0 0 0 2px white, 0 0 0 3px #2575fc;
 }
@@ -154,14 +153,14 @@ label {
   position: absolute;
   left: -50%;
   top: 9px;
-  z-index: -1; 
+  z-index: -1;
 }
 
 #progressbar li:first-child:after {
-  content: none; 
+  content: none;
 }
 
-#progressbar li.active:before,  
+#progressbar li.active:before,
 #progressbar li.active:after {
   background: #2575fc;
   color: white;
@@ -184,24 +183,49 @@ select {
   justify-content: space-between; /* Alinhar os botões na mesma linha com espaço entre eles */
 }
 
-.ativo{
+.ativo {
   margin-top: -5%;
   display: flex;
   font-size: 1.0rem;
   text-align: center;
 }
 
-#ativo{
+#ativo {
   margin-left: -160px;
   margin-top: 30px;
 }
 
-.ativo_span{
+.ativo_span {
   margin-left: 30px;
   display: flex;
 }
 
-span{
+span {
   color: #726f6f;
   margin: auto 60px;
+}
+
+#msform .buttonImagens {
+  background: #0e65b6;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#containerImagensWrapper {
+  max-height: 200px; /* Ajuste conforme necessário */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.imagem-input {
+  display: flex;
+  gap: 10px;
 }

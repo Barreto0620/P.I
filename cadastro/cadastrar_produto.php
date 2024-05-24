@@ -26,7 +26,7 @@ try {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
-	<link rel="stylesheet" href="css/cadastrar_produto.css">
+	<link rel="stylesheet" href="css/cadastrar_produtos.css">
 	<link rel="stylesheet" href="css/stars_.css">
 	<title>Cadastro de Produtos | Games Space</title>
 </head>
@@ -51,13 +51,13 @@ try {
 			const novoInputURL = document.createElement('input');
 			novoInputURL.type = "text";
 			novoInputURL.name = 'imagem_url[]';
-			novoInputURL.placeholder = 'URL da Imagem';
+			novoInputURL.placeholder = 'Adicionar';
 			novoInputURL.required = true;
 
 			const novoInputOrdem = document.createElement('input');
 			novoInputOrdem.type = "number";
 			novoInputOrdem.name = 'imagem_ordem[]';
-			novoInputOrdem.placeholder = 'Ordem da Imagem';
+			novoInputOrdem.placeholder = 'Ordem';
 			novoInputOrdem.min = "1";
 			novoInputOrdem.required = true;
 
@@ -126,12 +126,17 @@ try {
 				<h3 class="fs-subtitle">Por favor, escolha as imagens</h3>
 
 				<label for="imagem"></label>
-				<div id="containerImagens">
-					<input type="text" name="imagem_url[]" placeholder="Adicionar Imagem">
-					<input type="number" name="imagem_ordem[]" placeholder="Ordem Imagem" min="1">
+				<div id="containerImagensWrapper">
+					<div id="containerImagens">
+						<div class="imagem-input">
+							<input type="text" name="imagem_url[]" placeholder="Adicionar">
+							<input type="number" name="imagem_ordem[]" placeholder="Ordem" min="1">
+						</div>
+					</div>
 				</div>
 
-				<button type="button" onclick="adicionarImagem()"> Adicionar mais Imagens</button>
+
+				<button type="button" class="buttonImagens" onclick="adicionarImagem()"> Adicionar mais Imagens</button>
 
 			<div class="ativo_span">	
 				<label for="ativo"></label>

@@ -61,7 +61,7 @@ try {
 			<td><?php echo $produto['PRODUTO_DESC']; ?></td>
 			<td><?php echo $produto['PRODUTO_PRECO']; ?></td>
 			<td><?php echo $produto['CATEGORIA_NOME']; ?></td>
-			<td><?php echo $produto['PRODUTO_ATIVO']; ?></td>
+			<td><?php echo $produto['PRODUTO_ATIVO'] == 1 ? 'Ativo' : 'Inativo'; ?></td>
 			<td><?php echo $produto['PRODUTO_DESCONTO']; ?></td>
 			<td><?php echo $produto['PRODUTO_QTD']; ?></td>
 			<td><img src="<?php echo $produto['IMAGEM_URL']; ?>" 

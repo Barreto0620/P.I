@@ -53,7 +53,7 @@ try {
                 <td><?php echo $administradores['ADM_NOME']; ?></td>
                 <td><?php echo $administradores['ADM_EMAIL']; ?></td>
                 <td><?php echo $administradores['ADM_SENHA']; ?></td>
-                <td><?php echo $administradores['ADM_ATIVO']; ?></td>
+                <td><?php echo $administradores['ADM_ATIVO'] == 1 ? 'Ativo' : 'Inativo'; ?></td>
                 <td><a href="editar_admin.php?id=<?php echo $administradores['ADM_ID']; ?>"class="action-btn">✍</a></td>
                 <td><a href="excluir_admin.php?id=<?php echo $administradores['ADM_ID']; ?>" class="action-btn delete-btn" onclick="return confirmarClique()">❌</a></td>
             </tr>

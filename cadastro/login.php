@@ -1,29 +1,32 @@
 <?php
-
 session_start();
 require_once('conexao.php');
 
-if (!isset($_SESSION['admin_logado'])) {
-  header('Location:login.php');
-  exit(); // se nao houver a permissão do usuario, irá parar o programa e nao aparecerá as demais informações.
+if (isset($_SESSION['admin_logado'])) {
+  header('Location: painel_admin.php'); // Se o usuário já estiver logado, redirecione para a página de administração
+  exit();
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') { // retorna o metod usado para acessar a página.
+if ($_SERVER['REQUEST_METHOD'] == 'POST') { // retorna o método usado para acessar a página.
 
   $nome = $_POST['nome'];
   $email = $_POST['email'];
   $senha = $_POST['senha'];
 
   try {
-    $sql = "INSERT INTO ADMINISTRADOR (ADM_NOME, ADM_EMAIL, ADM_SENHA)  VALUES (:nome, :email, :senha)";
+    $sql = "INSERT INTO ADMINISTRADOR (ADM_NOME, ADM_EMAIL, ADM_SENHA) VALUES (:nome, :email, :senha)";
 
-    $stmt = $pdo->prepare($sql); //Nessa linha, $stmt é um objeto que representa a instrução SQL preparada. Você pode então vincular parâmetros a essa instrução e executá-la.
+    $stmt = $pdo->prepare($sql); // Nessa linha, $stmt é um objeto que representa a instrução SQL preparada. Você pode então vincular parâmetros a essa instrução e executá-la.
     $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
     $stmt->bindParam(':email', $email, PDO::PARAM_STR);
     $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
     $stmt->execute();
+
+    // Redirecionar para a página de administração após o cadastro bem-sucedido
+    header('Location: admin.php');
+    exit();
   } catch (PDOException $e) {
-    echo "<p style='color=red;'> Erro ao cadastrar Usuário!" . $e->getMessage() . "</p>";
+    echo "<p style='color:red;'> Erro ao cadastrar Usuário!" . $e->getMessage() . "</p>";
   }
 }
 ?>
@@ -126,3 +129,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // retorna o metod usado para acessa
 </body>
 
 </html>
+

@@ -18,7 +18,7 @@ if (!isset($_SESSION['admin_logado'])) {
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <link rel="stylesheet" href="css/painel_admin1.css">
     <link rel="stylesheet" href="css/stars_.css"/>
-    <link rel="stylesheet" href="./css/carossel_painel.css" />
+    <link rel="stylesheet" href="./css/painel_carrosel.css" />
     <title>Painel do Administrador | Games Space</title>
 </head>
 
@@ -65,6 +65,11 @@ if (!isset($_SESSION['admin_logado'])) {
                     <a href="categoria.php">Cadastrar Categoria</a>
                 </h2>
             </button>
+            <button class='card card6' tabindex="-1">
+                <h2>
+                    <a href="#">Lista de Categorias</a>
+                </h2>
+            </button>
         </div>
 
         <button class="arrow-btn arrow-btn-prev" tabindex="0">
@@ -79,7 +84,7 @@ if (!isset($_SESSION['admin_logado'])) {
         </button>
     </div>
 
-    <script src="../js/carrossel_painel.js"></script>
+    <script src="js/carrossel_painel.js"></script>
 
 </body>
 

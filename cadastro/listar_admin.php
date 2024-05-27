@@ -22,9 +22,10 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
 	<link rel="stylesheet" href="css/stars_.css">
-    <link rel="stylesheet" href="css/lista_admin_.css">
+    <link rel="stylesheet" href="css/lista_admin.css">
     <title>Administradores Cadastrados | Games Space</title>
 </head>
 
@@ -55,7 +56,8 @@ try {
                 <td><?php echo $administradores['ADM_SENHA']; ?></td>
                 <td><?php echo $administradores['ADM_ATIVO'] == 1 ? 'Ativo' : 'Inativo'; ?></td>
                 <td><a href="editar_admin.php?id=<?php echo $administradores['ADM_ID']; ?>"class="action-btn">✍</a></td>
-                <td><a href="excluir_admin.php?id=<?php echo $administradores['ADM_ID']; ?>" class="action-btn delete-btn" onclick="return confirmarClique()">❌</a></td>
+                <td><a href="#" class="action-btn delete-btn" onclick="confirmarClique(<?php echo $administradores['ADM_ID']; ?>)">❌</a></td>
+
             </tr>
         <?php endforeach; ?>
     </table>

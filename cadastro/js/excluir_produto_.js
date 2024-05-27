@@ -14,7 +14,7 @@ function confirmarClique(id) {
     }).then((result) => {
         if (result.isConfirmed) {
             // Se o usuário confirmar, redirecione para excluir_admin.php com o ID do administrador
-            window.location.href = `excluir_admin.php?id=${id}`;
+            window.location.href = `excluir_produto.php?id=${id}`;
         }
     });
 }

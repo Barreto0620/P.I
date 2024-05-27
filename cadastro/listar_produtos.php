@@ -26,7 +26,8 @@ try {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
-	<link rel="stylesheet" href="css/lista_produto.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	<link rel="stylesheet" href="css/lista_produtos.css">
 	<link rel="stylesheet" href="css/stars_.css">
 	<title>Lista de Produtos | Games Space</title>
 
@@ -67,12 +68,12 @@ try {
 			<td><img src="<?php echo $produto['IMAGEM_URL']; ?>" 
 			alt="Imagem do Produto" width="50"></td>
 			<td><a href="editar_produto.php?id=<?php echo $produto['PRODUTO_ID'];?>" class="action-btn">✍</a></td>  <!-- irá buscar o link via GET para que busque essa pasta e apareça a mensagem  -->	
-			<td><a href="excluir_produto.php?id=<?php echo $produto['PRODUTO_ID']; ?>" class="action-btn delete-btn" onclick="return confirmarClique()">❌</a></td>
+			<td><a href="#" class="action-btn delete-btn" onclick="confirmarClique(<?php echo $produto['PRODUTO_ID']; ?>)">❌</a></td>
 		</tr>
 		<?php endforeach;?>
 	</table>
 	
 </body>
-<script src="js/excluir_produto.js"></script>
+<script src="js/excluir_produto_.js"></script>
 
 </html>

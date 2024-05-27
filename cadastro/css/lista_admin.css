@@ -67,3 +67,16 @@ h1 {
 header {
     display: flex;
 }
+
+.custom-swal-popup {
+    font-weight: #000000;
+    border-radius: 30px;
+    width: 500px; /* largura desejada */
+    height: auto; /* altura automática */
+    background-image: linear-gradient(to right, #002b4b 0%, #b34a2f 100%); /* cor de fundo desejada */   
+    box-shadow: #000000 0px 0px 10px; /* sombra da borda desejada */
+}
+
+.swal2-title, .swal2-content {
+    color: aliceblue;
+}

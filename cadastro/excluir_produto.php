@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])){
             $message = "Erro ao excluir o produto!";
     }
 } catch (PDOException $e){
-    $message = "<p style='color:red;'>Infelizmente ocorreu um erro, tente novamente mais tarde ! ";
+    $message = "<p style='color:white;'>Infelizmente ocorreu um erro, tente novamente mais tarde ! ";
 }
 }
 ?>

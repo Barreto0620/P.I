@@ -41,7 +41,7 @@ try {
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Senha</th>
-                <th>Ativo</th>
+                <th>Status</th>
                 <th>Editar</th>
                 <th>Excluir</th>
             </tr>

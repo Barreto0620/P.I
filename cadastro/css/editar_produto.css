@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
 
+::-webkit-scrollbar { /* cor e tmanho da barra de rolagem */
+	width: 1vh;
+    background-color: #b34a2f;
+	
+}
+
+::-webkit-scrollbar-thumb { /* edita a cor e tamanho da parte movel da barra de rolagem */
+	background-color: #002b4b;
+	border-radius: 3px;
+}
+
+
 html {
   height: 100%;
 }

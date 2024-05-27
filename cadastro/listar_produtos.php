@@ -26,7 +26,7 @@ try {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
-	<link rel="stylesheet" href="css/lista_produto.css">
+	<link rel="stylesheet" href="css/lista_produtos.css">
 	<link rel="stylesheet" href="css/stars_.css">
 	<title>Lista de Produtos | Games Space</title>
 
@@ -46,7 +46,7 @@ try {
 				<th> Descrição </th>
 				<th> Preço </th>
 				<th> Categoria </th>
-				<th> Ativo </th>
+				<th> Status </th>
 				<th> Desconto </th>
 				<th> Estoque </th>
 				<th> Imagem </th>

@@ -11,12 +11,12 @@ if (!isset($_SESSION['admin_logado'])) {
 require_once('conexao.php');
 
 //busca categoria
-try{
+try {
     $stmt_categoria = $pdo->prepare("SELECT * FROM CATEGORIA");
-    $stmt_categoria ->execute();
+    $stmt_categoria->execute();
     $categorias = $stmt_categoria->fetchAll(PDO::FETCH_ASSOC);
-}catch(PDOException $e){
-    echo "<p style='color:red;'> Erro ao buscar categorias:" .$e->getMessage()."</p>";
+} catch (PDOException $e) {
+    echo "<p style='color:red;'> Erro ao buscar categorias:" . $e->getMessage() . "</p>";
 }
 
 // Se a página foi acessada via método GET, o script tenta recuperar os detalhes do produto com base no ID passado na URL.
@@ -72,10 +72,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if (!empty($url) && isset($_POST['imagem_ordem'][$index])) {
                     $ordem = $_POST['imagem_ordem'][$index];
                     $imagem_id = $_POST['imagem_id'][$index]; // Certifique-se de incluir campos ocultos com imagem_id em seu formulário
-            
+
                     // Atualizar cada entrada de imagem
                     $stmt_imagem = $pdo->prepare("UPDATE PRODUTO_IMAGEM SET IMAGEM_ORDEM = :imagem_ordem, IMAGEM_URL = :imagem_url WHERE PRODUTO_ID = :id AND IMAGEM_ID = :imagem_id");
-                    
+
                     $stmt_imagem->bindParam(':imagem_url', $url, PDO::PARAM_STR);
                     $stmt_imagem->bindParam(':imagem_ordem', $ordem, PDO::PARAM_INT);
                     $stmt_imagem->bindParam(':id', $id, PDO::PARAM_INT);
@@ -84,10 +84,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 }
             }
         }
-        
+
 
         $stmtProdutoEstoque = $pdo->prepare("UPDATE PRODUTO_ESTOQUE SET PRODUTO_QTD = :qtd WHERE PRODUTO_ID = :id");
-        $stmtProdutoEstoque->bindParam(':qtd',$produto_qtd,PDO::PARAM_STR);
+        $stmtProdutoEstoque->bindParam(':qtd', $produto_qtd, PDO::PARAM_STR);
         $stmtProdutoEstoque->bindParam(':id', $id, PDO::PARAM_INT);
         $stmtProdutoEstoque->execute();
 
@@ -115,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
-    <link rel="stylesheet" href="css/editar_produto.css">
+    <link rel="stylesheet" href="css/editar_produtos.css">
     <link rel="stylesheet" href="css/stars_.css">
     <title>Editar Produto | Games Space</title>
 </head>
@@ -154,16 +154,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                 <label for="descricao"></label>
-                <input type="text" name="descricao" id="descricao" placeholder="Descrição" value="<?php echo $produto['PRODUTO_DESC']; ?>">
+                <textarea name="descricao" class="input-desc" id="descricao" placeholder="Descrição"><?php echo $produto['PRODUTO_DESC']; ?></textarea>
+
 
                 <label for="categoria_nome"></label>
                 <select name="categoria_id" id="categoria_id" required>
                     <?php foreach ($categorias as $categoria) : ?>
-                        <option value="<?= $categoria['CATEGORIA_ID'] ?>">
+                        <option value="<?= $categoria['CATEGORIA_ID'] ?>" <?php echo ($categoria['CATEGORIA_ID'] == $produto['CATEGORIA_ID']) ? 'selected' : ''; ?>>
                             <?= $categoria['CATEGORIA_NOME'] ?>
                         </option>
                     <?php endforeach; ?>
                 </select>
+
 
                 <input type="button" name="next" class="next action-button" value="Proximo" />
 

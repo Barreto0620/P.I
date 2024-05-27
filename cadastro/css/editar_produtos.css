@@ -227,3 +227,18 @@ span {
   overflow-y: auto;
   margin-bottom: 20px;
 }
+
+.input-desc {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  height: 20px; /* Altura desejada */
+  resize: vertical; /* Permitir redimensionamento apenas vertical */
+  overflow: auto; /* Adicionar barra de rolagem quando necessário */
+}

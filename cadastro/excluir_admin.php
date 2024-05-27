@@ -7,9 +7,9 @@ if (!isset($_SESSION['admin_logado'])) {
 }
 
 require_once('conexao.php');
+
+    $mensagem = "<p style='color=white;'>Usuário excluido com sucesso!";
 ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,7 +31,7 @@ require_once('conexao.php');
     <div class="card">
         <div class="title">
             <?php
-            $mensagem = '';
+            
 
             if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
                 $id = $_GET['id'];
@@ -41,12 +41,12 @@ require_once('conexao.php');
                     $stmt->execute();
 
                     if ($stmt->rowCount() > 0) {
-                        $mensagem = "Usuário excluido com sucesso!";
+                        echo $mensagem;
                     } else {
                         $mensagem = "Infelizmente, houve um erro! Tente novamente mais tarde.";
                     }
                 } catch (PDOException $e) {
-                    echo "<p style='color=white;'>Infelizmente, houve um erro!<br> Tente novamente mais tarde.";
+                    echo "<p style='color=white;'>Infelizmente, houve um erro! Tente novamente mais tarde.";
                 }
             }
             ?>

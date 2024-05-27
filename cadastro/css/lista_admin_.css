@@ -1,16 +1,14 @@
-::-webkit-scrollbar { /* cor e tmanho da barra de rolagem */
-	width: 1vh;
+::-webkit-scrollbar {
+    width: 1vh;
     background-color: #b34a2f;
-	
 }
 
-::-webkit-scrollbar-thumb { /* edita a cor e tamanho da parte movel da barra de rolagem */
-	background-color: #002b4b;
-	border-radius: 3px;
+::-webkit-scrollbar-thumb {
+    background-color: #002b4b;
+    border-radius: 3px;
 }
 
-
-body{
+body {
     font-family: Arial, sans-serif;
     background-color: #1f2029;
 }
@@ -22,7 +20,7 @@ table {
     color: aliceblue;
 }
 
-th,td {
+th, td {
     padding: 10px;
     border-bottom: 1px solid #fa6744;
     text-align: left;
@@ -33,10 +31,9 @@ th {
     color: aliceblue;
 }
 
-td{
+td {
     background-color: rgb(20, 18, 18);
 }
-
 
 .action-btn {
     padding: 5px 10px;
@@ -54,20 +51,19 @@ td{
     background-color: #da190b;
 }
 
-h1{
+h1 {
     color: aliceblue;
-    text-align: center;
-    margin-left: 450px;
+    text-align: center; /* Alteração para centralizar o texto */
+    margin: 0 auto; /* Adicionado para centralizar horizontalmente */
 }
 
-.xis{
+.xis {
     height: 45px;
     width: 45px;
     text-decoration: none;
-    margin-top: 50%;
+    align-self: center; /* Adicionado para alinhar verticalmente com flexbox */
 }
 
-header{
+header {
     display: flex;
-
 }

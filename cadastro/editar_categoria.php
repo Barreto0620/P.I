@@ -58,15 +58,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
-    <link rel="stylesheet" href="./css/cadastrar_categorias.css">
-    <link rel="stylesheet" href="css/stars_.css">
+    <link rel="stylesheet" href="./css/editar_categoria.css">
     <title>Editar Categoria | Games Space</title>
 </head>
 
 <body>
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
     <header>
             <a href="listar_categoria.php"><img class="logo" src="./img/logo_1.png" alt="Foto da loja de Games"></a>
         </header>

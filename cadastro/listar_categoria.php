@@ -79,12 +79,13 @@ try {
 							<a href="editar_categoria.php?id=<?php echo $categoria['CATEGORIA_ID']; ?>" class="action-btn">✍</a>
 						</td>
 						<td>
-							<a href="excluir_categoria.php?id=" class="action-btn delete-btn" onclick="confirmarClique(<?php echo $categoria['CATEGORIA_ID']; ?>)">❌</a>
+							<a href="#" class="action-btn delete-btn" onclick="confirmarClique(<?php echo $categoria['CATEGORIA_ID']; ?>)">❌</a>
 						</td>
 					</tr>
 				<?php endforeach; ?>
 
 		</section>
 	</body>
+	<script src="js/excluir_categoria.js"></script>
 
 	</html>

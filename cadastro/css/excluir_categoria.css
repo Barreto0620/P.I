@@ -1,0 +1,65 @@
+html {
+  background: url("../img/editar_categoria.gif");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.title {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.card {
+  width: 400px;
+  height: 300px;
+  border-radius: 30px;
+  background: #000000;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+  margin-left: 35%;
+  margin-top: 3%;
+}
+
+p {
+  color: aliceblue;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 25%;
+}
+
+.logo {
+  margin-left: 5%;
+  width: 10%;
+  height: 10%;
+}
+
+.btn {
+  background-color: aliceblue;
+  border-radius: 20px;
+  border: 1px solid var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  padding: 0.9rem 4rem;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  margin-top: 10%;
+  margin-left: 25%;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #fa6744;
+  transition: 0.5s;
+}

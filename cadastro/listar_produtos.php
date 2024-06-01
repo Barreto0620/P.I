@@ -74,6 +74,6 @@ try {
 	</table>
 	
 </body>
-<script src="js/excluir_produto_.js"></script>
+<script src="js/excluir_produto.js"></script>
 
 </html>

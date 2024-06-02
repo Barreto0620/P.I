@@ -35,7 +35,7 @@ try {
 		<link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 		<link rel="stylesheet" href="css/lista_categoria.css">
-		<link rel="stylesheet" href="css/stars_.css">
+		<link rel="stylesheet" href="css/estrelas_.css">
 		<title>Lista de Produtos | Games Space</title>
 
 	</head>

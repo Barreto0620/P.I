@@ -18,7 +18,7 @@ require_once('conexao.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
     <link rel="stylesheet" href="css/excluir.css">
-    <link rel="stylesheet" href="css/stars_.css">
+    <link rel="stylesheet" href="css/estrelas_.css">
     <title>Usuário Deletado ! | Games Space</title>
 </head>
 

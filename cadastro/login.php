@@ -39,8 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // retorna o método usado para aces
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/logo_1.png">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/stars_.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/estrelas_.css">
   <title>Login | Games Space </title>
 </head>
 

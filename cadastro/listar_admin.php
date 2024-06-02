@@ -24,7 +24,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="./img/logo_1.png">
-    <link rel="stylesheet" href="css/stars_.css">
+    <link rel="stylesheet" href="css/estrelas_.css">
     <link rel="stylesheet" href="css/lista_admin_.css">
     <title>Administradores Cadastrados | Games Space</title>
 </head>
